@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --neon-pink: #ff2d55;
+  --neon-blue: #0ff;
+  --dark-bg: #0a0a0a;
+  --button-bg: #1a1a1a;
+  --text-glow: 0 0 10px var(--neon-blue);
+  --button-glow: 0 0 15px var(--neon-pink);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+  background: var(--dark-bg);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid var(--neon-pink);
+  box-shadow: 0 0 20px var(--neon-pink);
+  max-width: 400px;
+  width: 100%;
+  animation: flicker 5s infinite;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background: var(--dark-bg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--neon-blue);
+  box-shadow: var(--text-glow);
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  text-align: right;
+  height: 1.5rem;
+}
+
+.current-operand {
+  color: var(--neon-blue);
+  font-size: 2.5rem;
+  text-align: right;
+  text-shadow: var(--text-glow);
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: var(--button-bg);
+  color: var(--neon-pink);
+  border: 1px solid var(--neon-pink);
+  cursor: pointer;
+  text-shadow: 0 0 5px var(--neon-pink);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--neon-pink);
+  color: var(--dark-bg);
+  box-shadow: var(--button-glow);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.span-two {
+  grid-column: span 2;
+  background: rgba(255, 45, 85, 0.1);
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 400px) {
+  .calculator-grid {
+    padding: 1rem;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+  
+  .current-operand {
+    font-size: 2rem;
+  }
+}
