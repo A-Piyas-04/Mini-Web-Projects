@@ -35,7 +35,7 @@ function App() {
         <div className="previous-operand">{equation}</div>
         <div className="current-operand">{display}</div>
       </div>
-      <button className="span-two" onClick={handleClear}>CLEAR</button>
+      
       <button onClick={() => handleOperator('/')}>/</button>
       <button onClick={() => handleNumber('7')}>7</button>
       <button onClick={() => handleNumber('8')}>8</button>
@@ -49,8 +49,10 @@ function App() {
       <button onClick={() => handleNumber('2')}>2</button>
       <button onClick={() => handleNumber('3')}>3</button>
       <button onClick={() => handleOperator('+')}>+</button>
+      <button onClick={() => handleNumber('00')}>00</button>
       <button onClick={() => handleNumber('0')}>0</button>
       <button onClick={() => handleNumber('.')}>.</button>
+      <button className="span-two" onClick={handleClear}>CLEAR</button>
       <button className="span-two" onClick={handleEqual}>=</button>
     </div>
   )
