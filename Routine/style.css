@@ -1,4 +1,3 @@
-/* Class Routine Styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -165,70 +164,103 @@ h1::after {
 }
 
 /* Color coding for different course types */
+/* CSE Courses - Blue Shades */
+.course[class*="CSE"] {
+    border-left: 4px solid #3f51b5;
+    padding-left: 6px;
+    color: #3f51b5;
+    background-color: rgba(63, 81, 181, 0.08);
+    border-radius: 4px;
+}
+
 .course[class*="CSE4403"] {
     border-left: 4px solid #3f51b5;
     padding-left: 6px;
     color: #3f51b5;
+    background-color: rgba(63, 81, 181, 0.08);
 }
 
 .course[class*="CSE4409"] {
     border-left: 4px solid #5c6bc0;
     padding-left: 6px;
     color: #5c6bc0;
+    background-color: rgba(92, 107, 192, 0.08);
 }
 
 .course[class*="CSE4411"] {
     border-left: 4px solid #7986cb;
     padding-left: 6px;
     color: #7986cb;
+    background-color: rgba(121, 134, 203, 0.08);
 }
 
 .course[class*="CSE4404"] {
     border-left: 4px solid #303f9f;
     padding-left: 6px;
     color: #303f9f;
+    background-color: rgba(48, 63, 159, 0.08);
 }
 
 .course[class*="CSE4410"] {
     border-left: 4px solid #1a237e;
     padding-left: 6px;
     color: #1a237e;
+    background-color: rgba(26, 35, 126, 0.08);
 }
 
 .course[class*="CSE4412"] {
     border-left: 4px solid #283593;
     padding-left: 6px;
     color: #283593;
+    background-color: rgba(40, 53, 147, 0.08);
+}
+
+/* SWE Courses - Green Shades */
+.course[class*="SWE"] {
+    border-left: 4px solid #4caf50;
+    padding-left: 6px;
+    color: #2e7d32;
+    background-color: rgba(76, 175, 80, 0.08);
+    border-radius: 4px;
 }
 
 .course[class*="SWE4401"] {
     border-left: 4px solid #4caf50;
     padding-left: 6px;
     color: #2e7d32;
+    background-color: rgba(76, 175, 80, 0.08);
 }
 
 .course[class*="SWE4402"] {
     border-left: 4px solid #66bb6a;
     padding-left: 6px;
     color: #388e3c;
+    background-color: rgba(102, 187, 106, 0.08);
 }
 
 .course[class*="SWE4404"] {
     border-left: 4px solid #81c784;
     padding-left: 6px;
     color: #43a047;
+    background-color: rgba(129, 199, 132, 0.08);
 }
 
+/* Math Courses - Red Shades */
 .course[class*="Math"] {
     border-left: 4px solid #f44336;
     padding-left: 6px;
     color: #c62828;
+    background-color: rgba(244, 67, 54, 0.08);
+    border-radius: 4px;
 }
 
+/* Humanities Courses - Orange Shades */
 .course[class*="Hum"] {
     border-left: 4px solid #ff9800;
     padding-left: 6px;
     color: #e65100;
+    background-color: rgba(255, 152, 0, 0.08);
+    border-radius: 4px;
 }
 
 .room {
@@ -246,18 +278,6 @@ h1::after {
 .cell:hover .room {
     background-color: #e8eaf6;
     transform: translateY(-1px);
-}
-
-.teacher {
-    font-size: 0.85em;
-    color: #616161;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    transition: all 0.2s ease;
-}
-
-.cell:hover .teacher {
-    color: #424242;
 }
 
 .note {
@@ -307,6 +327,27 @@ h1::after {
 .break > * {
     position: relative;
     z-index: 1;
+}
+
+/* Lab cell styling */
+.lab-cell {
+    flex: 2;
+    background-color: rgba(245, 247, 250, 0.7);
+    border-left: 2px dashed #e0e0e0;
+    border-right: 2px dashed #e0e0e0;
+    position: relative;
+}
+
+.lab-cell::after {
+    content: 'Lab';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.7em;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: #616161;
 }
 
 /* Header and Print Button */
@@ -474,7 +515,7 @@ h1::after {
         font-size: 0.95em;
     }
     
-    .room, .teacher {
+    .room {
         font-size: 0.8em;
     }
     
