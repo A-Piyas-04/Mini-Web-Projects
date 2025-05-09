@@ -159,60 +159,70 @@ h1::after {
     font-size: 1.05em;
     letter-spacing: 0.3px;
     position: relative;
-    padding-left: 5px;
+    padding: 5px;
     transition: all 0.2s ease;
+}
+
+.course-code {
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-bottom: 2px;
+    opacity: 0.9;
+}
+
+.course-name {
+    font-size: 0.95em;
+    font-weight: 500;
 }
 
 /* Color coding for different course types */
 /* CSE Courses - Blue Shades */
-.course[class*="CSE"] {
-    border-left: 4px solid #3f51b5;
+.course[class*="CSE4403"] {
+    border-left: 4px solid #1e88e5;
     padding-left: 6px;
-    color: #3f51b5;
-    background-color: rgba(63, 81, 181, 0.08);
+    color: #1565c0;
+    background-color: rgba(30, 136, 229, 0.08);
     border-radius: 4px;
 }
 
-.course[class*="CSE4403"] {
-    border-left: 4px solid #3f51b5;
-    padding-left: 6px;
-    color: #3f51b5;
-    background-color: rgba(63, 81, 181, 0.08);
-}
-
 .course[class*="CSE4409"] {
-    border-left: 4px solid #5c6bc0;
+    border-left: 4px solid #673ab7;
     padding-left: 6px;
-    color: #5c6bc0;
-    background-color: rgba(92, 107, 192, 0.08);
+    color: #512da8;
+    background-color: rgba(103, 58, 183, 0.08);
+    border-radius: 4px;
 }
 
 .course[class*="CSE4411"] {
-    border-left: 4px solid #7986cb;
+    border-left: 4px solid #009688;
     padding-left: 6px;
-    color: #7986cb;
-    background-color: rgba(121, 134, 203, 0.08);
+    color: #00796b;
+    background-color: rgba(0, 150, 136, 0.08);
+    border-radius: 4px;
 }
 
 .course[class*="CSE4404"] {
-    border-left: 4px solid #303f9f;
+    border-left: 4px solid #e91e63;
     padding-left: 6px;
-    color: #303f9f;
-    background-color: rgba(48, 63, 159, 0.08);
+    color: #c2185b;
+    background-color: rgba(233, 30, 99, 0.08);
+    border-radius: 4px;
 }
 
 .course[class*="CSE4410"] {
-    border-left: 4px solid #1a237e;
+    border-left: 4px solid #ffc107;
     padding-left: 6px;
-    color: #1a237e;
-    background-color: rgba(26, 35, 126, 0.08);
+    color: #ffa000;
+    background-color: rgba(255, 193, 7, 0.08);
+    border-radius: 4px;
 }
 
 .course[class*="CSE4412"] {
-    border-left: 4px solid #283593;
+    border-left: 4px solid #795548;
     padding-left: 6px;
-    color: #283593;
-    background-color: rgba(40, 53, 147, 0.08);
+    color: #5d4037;
+    background-color: rgba(121, 85, 72, 0.08);
+    border-radius: 4px;
 }
 
 /* SWE Courses - Green Shades */
